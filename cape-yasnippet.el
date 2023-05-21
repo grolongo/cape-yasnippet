@@ -50,10 +50,9 @@
         :exclusive 'no)
   "Completion extra properties for `cape-yasnippet'.")
 
-(defun cape--yasnippet-annotation (arg)
-  "Get the :name item as ARG for annotations."
-  (lambda (name))
-  (get-text-property 0 'yas-annotation arg))
+(defun cape--yasnippet-annotation (desc)
+  "Get the :name item as DESC for annotations."
+  (get-text-property 0 'yas-annotation desc))
 
 (defun cape-yasnippet--lookup-snippet (name)
   "Get the snippet called NAME in MODE's tables."
